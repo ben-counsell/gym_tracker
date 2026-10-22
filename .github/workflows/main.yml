@@ -1,0 +1,16 @@
+name: Sync to GitLab
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to GitLab
+        uses: kujov/gitlab-sync@main
+        with:
+          gitlab_url: ${{ secrets.https://gitlab.com/ben-counsell/gym_tracker }}
+          username: ${{ secrets.bencounsell }}
+          gitlab_pat: ${{ secrets.glpat-kJo2YxPEkbZKJcxizC8POWM6MQpvOjEKdTpwejg3MA8.01.171osrhlw }}
